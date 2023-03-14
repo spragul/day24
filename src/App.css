@@ -2,37 +2,97 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 27px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.cart-value {
+  display: flex;
+  justify-content: end;
+  margin: 15px;
+  font-size: larger;
+}
+
+.image {
+  position: relative;
+  display: inline;
+
+
+}
+
+.sale {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  padding: 5px 5px;
+  margin: 5px;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 16px;
+
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center; */
+
+
+}
+
+.bg-dark {
+  background-color: black;
+}
+
+.text-white {
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heater-continar {
+  color: white;
+  background-color: rgb(27, 25, 25);
+  padding: 40px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-continar {
+  color: white;
+  background-color: rgb(27, 25, 25);
+  padding: 30px;
+}
+
+.me-1 {
+  margin-right: 0.25rem;
+}
+
+.bi-cart-fill::before {
+  content: "\f23d";
+}
+
+.button1 {
+  border: 1px solid black;
+}
+
+.star-rating button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.on {
+  color: #f3ef15;
+}
+
+.off {
+  color: #ccc;
 }
