@@ -16,7 +16,8 @@ function App() {
         "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
         sale: 0,
       productName: "Fancy Product",
-      price: "$40.00 - $80.00",
+      price: "$40.00 -",
+      price1:" $80.00",
       rating: 0,
     },
     {
@@ -24,7 +25,8 @@ function App() {
         "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
       sale: 1,
       productName: "Special Item",
-      price: "$20.00 $18.00",
+      price2: "$20.00 ",
+      price1:"$18.00",
       rating: 5,
     },
     {
@@ -32,7 +34,8 @@ function App() {
         "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
         sale: 1,
       productName: "Sale Item",
-      price: "$50.00 $25.00",
+      price2: "$50.00 ",
+      price1:"$25.00",
       rating: 0,
     },
     {
@@ -48,7 +51,8 @@ function App() {
         "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
         sale: 0,
       productName: "Sale Item",
-      price: "$50.00 $25.00",
+      price2: "$50.00 ",
+      price1:"$25.00",
       rating: 0,
     },
     {
@@ -56,7 +60,8 @@ function App() {
         "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
         sale: 0,
       productName: "Fancy Product",
-      price: "$120.00 - $280.00",
+      price: "$120.00 -",
+      price1:"$280.00",
       rating: 0,
     },
     {
@@ -64,7 +69,8 @@ function App() {
         "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
         sale: 1,
       productName: "Special Item",
-      price: "$20.00 $18.00",
+      price2: "$20.00",
+      price1: " $18.00",
       rating: 5,
     },
     {
@@ -89,11 +95,7 @@ function App() {
           <p>With this shop hompeage template</p>
         </div>
       </header>
-      {/* <div className="cart-value">
-        <Badge bg="success">
-          CART {count}
-        </Badge>
-      </div> */}
+
 
       <div className="card-container">
         {data.map((prod, idx) => <Cards
@@ -133,16 +135,14 @@ function Cards({ prod, idx, setCount, count }) {
       {prod.sale>0 ? <span className="sale bg-dark text-white">sale</span>: ""}
       <Card.Body>
         <Card.Title>{prod.productName}</Card.Title>
-        <Card.Text>{prod.price}</Card.Text>
-        { prod.rating>0 ? <Card.Text><StarRating /></Card.Text>: ""}
+        <Card.Text><del>{prod.price2}</del>{prod.price}{prod.price1} </Card.Text>
+        { prod.rating>0 ? <Card.Text><StarRating /></Card.Text>: ''}
         {/* conditional rendering */}
         {!show ? <Button
           variant="light"
           onClick={addToCart}
           className="button1"
         >Add to cart</Button> : ""}
-
-
         {show ? <Button
           variant="dark"
           onClick={removeFromCart}
@@ -196,7 +196,7 @@ function StarRating() {
           </button>
           
         );
-      })};
+      })}
     </div>
   );
 }
